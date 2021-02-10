@@ -1,13 +1,15 @@
 @import "~normalize.css";
-
 @import "_variables";
 @import "modules/hello.scss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 body {
-  background: $wtf;
+  background: #000000;
+  font-family: 'Poppins';
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   min-height: 100vh;
 }
