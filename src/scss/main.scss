@@ -1,10 +1,9 @@
 @import "~normalize.css";
 @import "_variables";
-@import "modules/hello.scss";
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 body {
-  background: #000000;
+  background-color: #000000;
   font-family: 'Poppins';
   color: #fff;
   display: flex;
@@ -12,15 +11,48 @@ body {
   justify-content: center;
   flex-direction: column;
   min-height: 100vh;
+  height: 100vh;
 }
 
 .app {
+  width: 100%;
 
   &__heading {
     margin-bottom: 28px;
     letter-spacing: 1px;
+    text-align: center;
+  }
+  &__descripton {
+    text-align: center;
+  }
+  &__iframe {
+    width: 1200px;
+    height: 650px;
+
+  }
+  &__iframe-container {
+    overflow: hidden;
   }
   &__madeby {
+    text-align: center;
+  }
+}
 
+@media (max-width: 768px) {
+  .app {
+    &__iframe {
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+  
+    }
+    &__iframe-container {
+      overflow: hidden;
+      /* 16:9 aspect ratio */
+      padding-top: 56.25%;
+      
+    }
   }
 }
